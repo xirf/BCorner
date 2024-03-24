@@ -5,4 +5,9 @@
     <string name="title_account">Accounts</string>
     <string name="text_masuk">Masuk</string>
     <string name="text_daftar">Daftar</string>
+    <string-array name="intro_array">
+        <item>B-corner membantu konselor memahami perilaku siswa dan remaja. Kenali beragam kenakalan, mulai dari lisan, hati, hingga perbuatan.</item>
+        <item>Aplikasi ini membantu mengubah kepribadian mereka dengan nilai-nilai Islam melalui berbagai fitur dan program yang tersedia.</item>
+        <item>Aplikasi B-Corner memudahkan konselor dalam proses pendampingan. Dapatkan informasi lengkap dan solusi tepat untuk remaja Anda.</item>
+    </string-array>
 </resources>
