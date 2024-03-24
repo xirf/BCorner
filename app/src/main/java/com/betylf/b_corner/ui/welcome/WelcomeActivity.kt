@@ -25,9 +25,9 @@ class WelcomeActivity : AppCompatActivity() {
         }
 
         val images = listOf(
-            R.drawable.ic_launcher_background,
-            R.drawable.ic_launcher_foreground,
-            R.drawable.ic_launcher_background
+            R.drawable.welcome_image_1,
+            R.drawable.welcome_image_2,
+            R.drawable.welcome_image_3
         )
         val texts = listOf("Welcome to B Corner", "Swipe to see more", "Enjoy your time")
         val viewPager: ViewPager2 = findViewById(R.id.viewPager)
