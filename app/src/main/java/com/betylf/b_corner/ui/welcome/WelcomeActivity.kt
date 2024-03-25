@@ -29,6 +29,7 @@ class WelcomeActivity : AppCompatActivity(), View.OnClickListener {
         startTimer()
         binding.btnMasuk.setOnClickListener(this)
         binding.btnDaftar.setOnClickListener(this)
+
         disableActionBar()
 
     }
