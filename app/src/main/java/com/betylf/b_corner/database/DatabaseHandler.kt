@@ -4,6 +4,8 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteOpenHelper
 import android.database.sqlite.SQLiteDatabase
+import android.util.Log
+import java.lang.Exception
 
 class DatabaseHandler(context: Context) :
     SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
@@ -118,7 +120,7 @@ class DatabaseHandler(context: Context) :
 
     fun getLoggedInUser(): String? {
         val db = this.readableDatabase
-        val query = "SELECT $KEY_USERNAME FROM $TABLE_LOGGED_IN"
+        val query = "SELECT * FROM $TABLE_LOGGED_IN"
         val cursor = db.rawQuery(query, null)
         cursor.moveToFirst()
         var name: String? = null
@@ -153,7 +155,7 @@ class DatabaseHandler(context: Context) :
 
     fun getProblemAnswer(index: Int): Int {
         val db = this.readableDatabase
-        val query = "SELECT * FROM $TABLE_PROBLEM WHERE $KEY_INDEX = ?"
+        val query = "SELECT * FROM $TABLE_PROBLEM WHERE $KEY_ID = ?"
         val cursor = db.rawQuery(query, arrayOf(index.toString()))
         cursor.moveToFirst()
         var questionIndex: Int? = null
@@ -175,14 +177,53 @@ class DatabaseHandler(context: Context) :
     fun setProblemAnswer(index: Int, selected: Int) {
         val db = this.writableDatabase
         val values = ContentValues()
-        values.put(KEY_INDEX, index)
+        values.put(KEY_ID, index)
         values.put(KEY_ANSWER_INDEX, selected)
-        if (getProblemAnswer(index) == -1) {
-            db.insert(TABLE_PROBLEM, null, values)
-        } else {
-            db.update(TABLE_PROBLEM, values, "$KEY_INDEX = ?", arrayOf(index.toString()))
+        try {
+            db.insertOrThrow(TABLE_PROBLEM, null, values)
+        } catch (e: Exception) {
+            db.update(TABLE_PROBLEM, values, "$KEY_ID = ?", arrayOf(index.toString()))
         }
         db.close()
+    }
+
+    fun dropProblemTable() {
+        val db = this.writableDatabase
+        db.execSQL("DELETE FROM $TABLE_PROBLEM")
+    }
+
+    fun createProblemTable() {
+        val db = this.writableDatabase
+        val createProblemsTableQuery = """
+        CREATE TABLE $TABLE_PROBLEM (
+            $KEY_ID INTEGER PRIMARY KEY,
+            $KEY_ANSWER_INDEX INTEGER
+        )
+        """
+
+        db.execSQL(createProblemsTableQuery)
+        db.close()
+    }
+
+    fun getAllProblem(): ArrayList<Int> {
+        val db = this.readableDatabase
+        val query = "SELECT * FROM $TABLE_PROBLEM"
+        val cursor = db.rawQuery(query, null)
+        val result = ArrayList<Int>()
+        while (cursor.moveToNext()) {
+            val columnIndex = cursor.getColumnIndex(KEY_ANSWER_INDEX)
+            val answerIndex = if (columnIndex != -1) {
+                cursor.getInt(columnIndex)
+            } else {
+                null
+            }
+            if (answerIndex != null) {
+                result.add(answerIndex)
+            }
+        }
+        cursor.close()
+        db.close()
+        return result
     }
 
 

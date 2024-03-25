@@ -1,13 +1,12 @@
 package com.betylf.b_corner.ui.test
 
-import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import androidx.fragment.app.Fragment
 import com.betylf.b_corner.CommunicatorFragment
 import com.betylf.b_corner.R
 import com.betylf.b_corner.database.DatabaseHandler
@@ -30,22 +29,22 @@ class TestFragment : CommunicatorFragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+    ): View {
+        binding = FragmentTestBinding.inflate(layoutInflater, container, false)
+        return binding.root
     }
 
-    override fun onReceive(key: String, value: Boolean) {
+    override fun processReceivedData(key: String, value: Boolean) {
         TODO("Not yet implemented")
     }
 
-    override fun registerReceiver(dataReceiver: (key: String, value: Boolean) -> Unit) {
-        this.dataReceiver = dataReceiver
+    override fun registerDataCallback(callback: (key: String, value: Boolean) -> Unit) {
+        this.dataReceiver = callback
     }
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentTestBinding.bind(view)
         databaseHandler = DatabaseHandler(requireContext())
 
         radioGroup = binding.radioGroup
@@ -57,7 +56,7 @@ class TestFragment : CommunicatorFragment() {
             r1.text = arguments?.getString(EXTRA_HATI).toString()
             r2.text = arguments?.getString(EXTRA_LISAN).toString()
             r3.text = arguments?.getString(EXTRA_PERILAKU).toString()
-            val index: Int = arguments?.getInt(EXTRA_INDEX)?.toInt() ?: 0
+            val index: Int = arguments?.getInt(EXTRA_INDEX) ?: 0
 
             val selected = databaseHandler.getProblemAnswer(index)
             if (selected != -1) {
@@ -66,6 +65,8 @@ class TestFragment : CommunicatorFragment() {
                     1 -> r2.isChecked = true
                     2 -> r3.isChecked = true
                 }
+
+                dataReceiver("checked", true)
             }
         }
 

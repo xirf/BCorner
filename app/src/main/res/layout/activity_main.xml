@@ -20,20 +20,40 @@
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
+        android:textColor="@color/primary"
+        android:textSize="36sp"
         android:textStyle="bold"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/salam"
         tools:text="Andika Nur Pratama" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sesuatu harusnya ada disini\namun belum diimplementasikan"
-        app:layout_constraintBottom_toTopOf="@+id/start_test"
+    <ImageButton
+        android:id="@+id/ib_logout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#0000"
+        android:src="@drawable/ic_logout_black_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:src="@drawable/welcome_image_2"
+        app:layout_constraintBottom_toTopOf="@id/start_test"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_name" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat datang di B-corner, silahkan gunakan tombol dibawah untuk memulai tes"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_welcome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/start_test"

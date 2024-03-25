@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.test.TestFragment"
-    >
+    tools:context=".ui.test.TestFragment">
+
 
     <RadioGroup
         android:id="@+id/radio_group"

@@ -16,8 +16,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+        val isLoggedIn = databaseHandler.isLoggedIn()
 
-        if (!databaseHandler.isLoggedIn()) {
+        if (!isLoggedIn) {
             goToWelcome()
         } else {
             setContentView(binding.root)
@@ -26,6 +27,11 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, TestActivity::class.java)
                 startActivity(intent)
             }
+        }
+
+        binding.ibLogout.setOnClickListener {
+            databaseHandler.clearLoggedIn()
+            goToWelcome()
         }
     }
 
