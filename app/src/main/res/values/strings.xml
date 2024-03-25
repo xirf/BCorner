@@ -5,9 +5,19 @@
     <string name="title_account">Accounts</string>
     <string name="text_masuk">Masuk</string>
     <string name="text_daftar">Daftar</string>
+    <string name="text_welcome_to_app">Selamat Datang di Aplikasi</string>
     <string-array name="intro_array">
         <item>B-corner membantu konselor memahami perilaku siswa dan remaja. Kenali beragam kenakalan, mulai dari lisan, hati, hingga perbuatan.</item>
         <item>Aplikasi ini membantu mengubah kepribadian mereka dengan nilai-nilai Islam melalui berbagai fitur dan program yang tersedia.</item>
         <item>Aplikasi B-Corner memudahkan konselor dalam proses pendampingan. Dapatkan informasi lengkap dan solusi tepat untuk remaja Anda.</item>
     </string-array>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
 </resources>

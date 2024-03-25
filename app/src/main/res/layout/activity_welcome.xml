@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Selamat Datang di Aplikasi"
+        android:text="@string/text_welcome_to_app"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
