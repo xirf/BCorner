@@ -22,14 +22,16 @@ class MainActivity : AppCompatActivity() {
             goToWelcome()
         } else {
             setContentView(binding.root)
-            binding.tvName.text = databaseHandler.getLoggedInUser() ?: "Admin"
+            binding.tvName.text =
+                databaseHandler.getUsername(databaseHandler.getLoggedInUser().toString())
+                    .split(" ")[0]
             binding.startTest.setOnClickListener {
                 val intent = Intent(this, TestActivity::class.java)
                 startActivity(intent)
             }
         }
 
-        binding.ibLogout.setOnClickListener {
+        binding.ibAccount.setOnClickListener {
             databaseHandler.clearLoggedIn()
             goToWelcome()
         }

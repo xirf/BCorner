@@ -36,11 +36,11 @@ class LoginActivity : AppCompatActivity() {
                     )
                 }
 
-                databaseHandler.setLoggedIn(username, username)
+                databaseHandler.setLoggedIn(username = username, name = isUserAvailable.toString())
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
                 finish()
-            }else{
+            } else {
                 binding.etEmail.error = getString(R.string.field_required)
                 binding.etPassword.error = getString(R.string.field_required)
             }

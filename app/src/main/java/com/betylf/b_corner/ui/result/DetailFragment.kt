@@ -15,8 +15,6 @@ class DetailFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         databaseHandler = DatabaseHandler(requireContext())
-
-
     }
 
     override fun onCreateView(

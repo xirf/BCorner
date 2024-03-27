@@ -5,56 +5,49 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.betylf.b_corner.R
+import com.betylf.b_corner.database.DatabaseHandler
+import com.betylf.b_corner.databinding.FragmentTreatmentBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TreatmentFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class TreatmentFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private lateinit var binding: FragmentTreatmentBinding
+    private lateinit var databaseHandler: DatabaseHandler
+    private var names: Array<String> = arrayOf()
+    private var descriptions: Array<String> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+        databaseHandler = DatabaseHandler(requireContext())
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_treatment, container, false)
-    }
+    ): View {
+        binding = FragmentTreatmentBinding.inflate(layoutInflater)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TreatmentFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TreatmentFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+        val result = databaseHandler.getAllProblem()
+        val result1 = result.count { it == 0 }
+        val result2 = result.count { it == 1 }
+        val result3 = result.count { it == 2 }
+
+        if (result1 > result2 && result1 > result3) {
+            names = resources.getStringArray(R.array.poin_hati)
+            descriptions = resources.getStringArray(R.array.step_hati)
+        } else if (result2 > result1 && result2 > result3) {
+            names = resources.getStringArray(R.array.poin_lisan)
+            descriptions = resources.getStringArray(R.array.step_lisan)
+        } else {
+            names = resources.getStringArray(R.array.poin_perbuatan)
+            descriptions = resources.getStringArray(R.array.step_perbuatan)
+        }
+
+//        layout manager
+        binding.lvTreatment.layoutManager = LinearLayoutManager(requireContext())
+        val treatmentAdapter = TreatmentAdapter(names, descriptions)
+        binding.lvTreatment.adapter = treatmentAdapter
+
+        return binding.root
     }
 }

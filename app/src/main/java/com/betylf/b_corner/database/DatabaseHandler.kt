@@ -89,6 +89,25 @@ class DatabaseHandler(context: Context) :
         return name
     }
 
+    fun getUsername(name: String): String {
+        val db = this.readableDatabase
+        val query = "SELECT $KEY_NAME FROM $TABLE_ACCOUNTS WHERE $KEY_USERNAME = ?"
+        val cursor = db.rawQuery(query, arrayOf(name))
+        cursor.moveToFirst()
+        var username: String? = null
+        if (cursor.moveToFirst()) {
+            val columnIndex = cursor.getColumnIndex(KEY_NAME)
+            username = if (columnIndex != -1) {
+                cursor.getString(columnIndex)
+            } else {
+                null
+            }
+        }
+        cursor.close()
+        db.close()
+        return username ?: "Admin"
+    }
+
     fun isLoggedIn(): Boolean {
         val db = this.readableDatabase
         val query = "SELECT * FROM $TABLE_LOGGED_IN"
@@ -125,7 +144,7 @@ class DatabaseHandler(context: Context) :
         cursor.moveToFirst()
         var name: String? = null
         if (cursor.moveToFirst()) {
-            val columnIndex = cursor.getColumnIndex(KEY_NAME)
+            val columnIndex = cursor.getColumnIndex(KEY_USERNAME)
             name = if (columnIndex != -1) {
                 cursor.getString(columnIndex)
             } else {

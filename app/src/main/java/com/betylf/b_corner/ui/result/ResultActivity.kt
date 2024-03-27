@@ -40,6 +40,10 @@ class ResultActivity : AppCompatActivity() {
                 1 -> tab.text = "Treatment"
             }
         }.attach()
+
+        binding.fabBack.setOnClickListener {
+            finish()
+        }
     }
 
 }
