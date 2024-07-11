@@ -49,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun disableActionBar() {
         supportActionBar?.hide()
-        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, insets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { _, _ ->
             WindowInsetsCompat.CONSUMED
         }
     }
