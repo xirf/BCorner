@@ -2,6 +2,7 @@ package com.betylf.b_corner
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.betylf.b_corner.database.DatabaseHandler
 import com.betylf.b_corner.databinding.ActivityMainBinding
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        enableEdgeToEdge()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         val isLoggedIn = databaseHandler.isLoggedIn()
 
@@ -22,9 +25,9 @@ class MainActivity : AppCompatActivity() {
             goToWelcome()
         } else {
             setContentView(binding.root)
-            binding.tvName.text =
-                databaseHandler.getUsername(databaseHandler.getLoggedInUser().toString())
-                    .split(" ")[0]
+//            binding.tvName.text =
+//                databaseHandler.getUsername(databaseHandler.getLoggedInUser().toString())
+//                    .split(" ")[0]
             binding.startTest.setOnClickListener {
                 val intent = Intent(this, TestActivity::class.java)
                 startActivity(intent)

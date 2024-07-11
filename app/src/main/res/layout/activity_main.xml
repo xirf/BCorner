@@ -1,73 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:paddingTop="?attr/actionBarSize">
+    android:background="@color/primary"
+    android:fitsSystemWindows="false">
 
-    <TextView
-        android:id="@+id/salam"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/salam"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/ib_account"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/salam"
-        tools:text="Andika" />
-
-    <ImageButton
-        android:id="@+id/ib_account"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:background="@drawable/indicator_unselected"
-        android:src="@drawable/ic_logout_black_24"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_name"
-        />
-
-    <ImageView
-        android:id="@+id/iv_welcome"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:src="@drawable/welcome_image_2"
-        app:layout_constraintBottom_toTopOf="@id/start_test"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_name"
-        app:layout_constraintVertical_bias="0.504" />
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_bottom"
+        android:backgroundTint="@color/base"
+        app:layout_constraintBottom_toTopOf="@+id/start_test"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selamat datang di B-corner, silahkan gunakan tombol dibawah untuk memulai tes"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_welcome"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <ImageView
+            android:id="@+id/iv_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_home"
+            app:layout_constraintBottom_toTopOf="@+id/tv_welcome_header"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504" />
 
-    <Button
+
+        <ImageButton
+            android:id="@+id/ib_account"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/base"
+            android:backgroundTint="@color/base"
+            android:src="@drawable/ic_logout_black_24"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:text="Ketahui dirimu lebih baik dengan tes kepribadian"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_welcome"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_welcome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:padding="24dp"
+            android:text="Selamat datang di B-corner, silahkan gunakan tombol dibawah untuk memulai tes"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/start_test"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Mulai Tes"
+        android:layout_height="82dp"
+        android:background="@android:color/transparent"
+        android:capitalize="sentences"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:text="@string/mulai_tes"
+        android:textAllCaps="false"
+        app:icon="@drawable/chevron_right"
+        app:iconGravity="textEnd"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintRight_toRightOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

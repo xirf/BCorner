@@ -14,11 +14,11 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="action_sign_in">Masuk atau daftar</string>
+    <string name="action_sign_in_short">Masuk</string>
+    <string name="welcome">"Selamat datang"</string>
+    <string name="invalid_username">username tidak valid</string>
+    <string name="invalid_password">Password tidak valid</string>
     <string name="login_failed">"Login failed"</string>
     <string name="field_required">Bagian ini harus diisi</string>
     <string name="salam">Assalamualaikum</string>
@@ -32,7 +32,7 @@
         <item>Saya suka berbicara dengan kalimat kasar</item>
         <item>saya selalu meneriaki orang lain yang tidak kenal</item>
         <item>Saya suka menuduh teman saya</item>
-        <item>Saya selalu membivcarakan orang lain</item>
+        <item>Saya selalu membicarakan orang lain</item>
         <item>Saya diam ketika di ejek</item>
         <item>saya memberikan selamat ketika teman saya juara kelas</item>
         <item>Saya suka bercerita kepada orang tua</item>
@@ -45,15 +45,15 @@
         <item>Saya selalu menghargai pendapat orang lain.</item>
     </string-array>
     <string-array name="questions_hati">
-        <item>Ketika hati saya merasa tidak nyaman, saya pergi ke tempat hiburan untu minum</item>
+        <item>Ketika hati saya merasa tidak nyaman, saya pergi ke tempat hiburan untuk minum</item>
         <item>Saya selalu membesarkan hati ketika saya mendapatkan masalah di sekolahan</item>
         <item>Saya diberi hukuman jika saya berbuat kesalahan</item>
         <item>Saya senang tampil beda jika di depan orang banyak</item>
         <item>Apabila berbicara dengan orang lain saya suka membuat keributan</item>
-        <item>Saya tidak pernag menghirraukan apabila ada orang lain menegur tentang perilaku saya</item>
+        <item>Saya tidak pernah menghiraukan apabila ada orang lain menegur tentang perilaku saya</item>
         <item>Saya merasa Allah tidak adil pada saya selalu beribadah tepat waktu</item>
         <item>Ketika melihat teman saya nilainya bagus, saya iri dengan teman saya</item>
-        <item>Saya amsih merasa kecewa dengan orang yang menyakiti hati saya</item>
+        <item>Saya masih merasa kecewa dengan orang yang menyakiti hati saya</item>
         <item>Saya selalu iri dengan segala pencapaian orang lain</item>
         <item>Ketika ada masalah dengan orang lain, saya menyelesaikan dengan kepala dingin, sehingga tidak terjadi perkelahian</item>
         <item>Ketika guru menjelaskan pelajaran, saya memperhatikan dengan baik</item>
@@ -67,28 +67,26 @@
         <item>Saya senang ketika teman saya mendapatkan nilai bagus</item>
     </string-array>
     <string-array name="questions_perbuatan">
-        <item>Saya pernah melempar benda (batu, botol dll) ke kendaraan atau orang lain</item>
+        <item>Saya suka melempar botol ke orang lain</item>
         <item>Saya sengaja mencubit teman saya</item>
         <item>Saya meminum miras bila mengalami masalah</item>
         <item>Saya pernah memalak teman di sekolah</item>
         <item>Saya sengaja merusak properti milik sekolah</item>
-        <item>Saya terlibat dalam tawuran antar sekolah /antar geng</item>
-        <item>Saya tidak segan membagi uang jajan saya kepada teman yang tidak punya uang saku</item>
-        <item>Saya tidak masuk sekolah tanpa surat izin (membolos)</item>
+        <item>Saya terlibat dalam tawuran antar sekolah</item>
+        <item>Saya tidak segan membagi uang jajan saya  kepada teman yang tidak punya uang saku</item>
+        <item>Saya sering tidak masuk sekolah tanpa surat izin</item>
         <item>Saya meminta uang teman dengan paksa</item>
         <item>Saya berbohong untuk kepentingan saya sendiri</item>
         <item>Saya mengembalikan barang yang selesai saya pinjam</item>
-        <item>Saya ikut dalam kegiatan sosial seperti</item>
-        <item>penggalangan dana untuk meringakankan korban bencana</item>
-        <item>Saya berusaha untuk selalu hadir dikelas (tidak bolos)</item>
+        <item>Saya suka ikut dalam kegiatan sosial</item>
+        <item>Saya berusaha untuk selalu hadir dikelas</item>
         <item>Saya mengenakan seragam sesuai ketentuan sekolah</item>
         <item>Saya menghindari perkelahian dengan teman</item>
-        <item>Saya menjaga lingkungan sekitar dengan tidak</item>
-        <item>merusak fasilitas umum (tidak coret-coret tembok dan sejenisnya)</item>
-        <item>Saya meminta izin ketika hendak meminjam barang teman/orang lain</item>
-        <item>Saya tidak membalas ketika teman saya menyakiti saya seperti mencubit, memukul atau menendang</item>
-        <item>Jika ada tugas belajar, saya lebih suka mengerjakan bersama teman-teman</item>
-        <item>Saya memakai attribute sekolah dengan lengkap</item>
+        <item>Saya menjaga lingkungan sekitar dengan tidak merusak fasilitas umum</item>
+        <item>Saya meminta izin ketika hendak meminjam barang teman</item>
+        <item>Saya tidak membalas ketika teman saya menyakiti saya</item>
+        <item>Saya suka mengerjakan PR bersama teman-teman</item>
+        <item>Saya memakai atribut sekolah dengan lengkap</item>
     </string-array>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -96,9 +94,10 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="desc_hati">Menurut al-Ghazali, istilah kalbu yang menunjuk kepada heart (jantung) dapat bermakna jantung fisik (jasmaniah) yang menjadi pusat peredaran darah dan jantung spiritual (batiniah) yang menjadi pusat perasaan, dalam arti perasaan halus (lathifah). Jantung (kalbu) jasmaniah menunjuk kepada aktivitas bolak-balik memompa darah untuk memelihara tubuh dengan mengirim darah segar beroksigen kepada tiap sel dan organ. Jantung spiritual menunjuk kepada keadaan bolak balik dalam menentukan keputusan, sekali senang sekali susah, memelihara jiwa dengan memberikan cahaya dan kearifan. Yang pertama sangat besar pengaruhnya pada kesehatan badan dan yang kedua besar pengaruhnya pada kesehatan jiwa. Keduanya tidak dapat dipisahkan.\n\n\nوَأَمَّا الَّذِينَ فِي قُلُوبِهِمْ مَرَضٌ فَزَادَتْهُمْ رِجْسًا إِلَىٰ رِجْسِهِمْ وَمَاتُوا وَهُمْ كَافِرُونَ\n\n\n“Dan Adapun orang-orang yang di dalam hati mereka ada penyakit, Maka dengan surat itu bertambah kekafiran mereka, disamping kekafirannya (yang telah ada) dan mereka mati dalam Keadaan kafir.” (QS. At-Taubah [9] : 125).</string>
-    <string name="desc_lisan">Lisan merupakan suatu yang diciptakan dan dianugerahkan oleh Allah swt. kepada manusia agar manusia dapat memanfaatkannya untuk kebaikan sebagai bentuk pengabdian kepada Allah swt. Lisan berasal dari kata yang terdiri dari tiga huruf, lam- sin- nun yang dihubungkan menjadi lisan yang mempunyai makna dasar yaitu panjang yang agak lembut. Manzur menjelaskan bahwa dalam lisan al-Arabi, kata lisan diartikan \u201CJarihat al-Kalam\u201D, yaitu anggota badan yang bisa mengeluarkan perkataan. Lisan merupakan anggota badan manusia yang cukup kecil jika dibandingkan dengan anggota badan yang lain, namun ia dapat menyebabkan pemiliknya ditetapkan sebagai penduduk surga atau bahkan dapat menyebabkan pemiliknya dilemparkan ke dalam api neraka.\r\n\nLisan dapat mempermudah manusia menuju surga namun dapat juga menjerumuskan manusia ke dalam panasnya api neraka. Menjaga lisan adalah salah satu kunci agar individu dapat memperbanyak bekal ketaqwaan. Rasulullah saw. bersabda, \n\n\u201CBarang siapa yang beriman kepada Allah dan hari akhir maka hendaklah ia berkata baik atau hendaklah ia diam\u201D (Muttafaq \u2018alaih: HR. Bukhari dan HR. Muslim).\n\nPerkataan-perkataan yang baik akan muncul dari lisan-lisan orang yang beriman dan bertaqwa kepada Allah swt. Manusia yang taat akan semua perintah Allah swt. dan menjauhi semua larangannya akan dapat menggunakan lisannya dengan penuh hati-hati. Sebab, ia mengetahui bahwa Allah swt. akan memberikan pahala yang sangat besar untuk individu yang menjaga lisannya dan ia juga mengetahui bahwa hukuman Allah swt. bagi orang-orang yang memiliki penyakit lisan juga tidak ringan. Rasulullah saw. Bersabda (Penafsiran artinya)\n\n\n\u201CSesungguhnya seseorang mengatakan kalimat yang diridhai Allah dan ia tidak menaruh perhatian terhadapnya melainkan Allah akan mengangkatnya beberapa derajat. Sesungguhnya seorang hamba mengatakan kalimat yang dimurkai Allah dan ia tidak menaruh perhatian terhadapnya melainkan ia terjerumus dengan sebab kalimat tersebut ke jahannam.\u201D (HR. Bukhari). Surga telah menanti hamba-hamba yang selalu menjaga lisannya. \u201CBarangsiapa bisa memberikan jaminan kepadaku (untuk menjaga) apa yang ada di antara dua janggutnya dan dua kakinya, maka kuberikan kepadanya jaminan masuk surga\u201D (HR. Bukhari).</string>
-    <string name="desc_perilaku">Menurut Kartini Kartono (2011 : 6) kenakalan remaja (Juvenile delinquency) ialah perilaku jahat (dursila), atau kejahatan\/kenakalan anak-anak muda; merupakan gejala sakit (patologis) secara sosial pada anak-anak dan remaja yang disebabkan oleh satu bentuk pengabaian sosial. Menurut Sudarsono (2012) bahwa juvenile delinquence sebagai kejahatan anak dapat diinterpretasikan berdampak negatif secara psikologis terhadap anak yang menjadi pelakunya, apalagi jika sebutan tersebut secara langsung menjadi semacam trade-mark. Sedangkan menurut Ary (2010) bahwa juvenile delinquency ialah perbuatan anak-anak yang melanggar norma sosial, norma hukum, norma kelompok, dan mengganggu ketentraman masyarakat, sehingga yang berwajib terpaksa mengambil tindakan pengamanan\/penangkalan. Berdasarkan pendapat Freud, pribadi manusia itu terbentuk dari dorongan-dorongan nafsu-nafsu. Juga dikemukakan olehnya bahwa ada 3 sistem dalam pembentukan pribadi manusia yang disebut Id, Ego, dan Superego, inilah yang menjadi prinsip kesenangan yang memiliki fungsi untuk menyalurkan enersi untuk segera meniadakan ketegangan (menuntut kepuasan). Dalam Al-Qur\u2019an dijelaskan pada surat Al-Hujrat Ayat 11 :\r\n\n\n\u064A\u064E\u0627 \u0623\u064E\u064A\u0651\u064F\u0647\u064E\u0627 \u0627\u0644\u0651\u064E\u0630\u0650\u064A\u0646\u064E \u0622\u0645\u064E\u0646\u064F\u0648\u0627 \u0644\u064E\u0627 \u064A\u064E\u0633\u0652\u062E\u064E\u0631\u0652 \u0642\u064E\u0648\u0652\u0645\u064C \u0645\u0650\u0646\u0652 \u0642\u064E\u0648\u0652\u0645\u064D \u0639\u064E\u0633\u064E\u0649\u0670 \u0623\u064E\u0646\u0652 \u064A\u064E\u0643\u064F\u0648\u0646\u064F\u0648\u0627 \u062E\u064E\u064A\u0652\u0631\u064B\u0627 \u0645\u0650\u0646\u0652\u0647\u064F\u0645\u0652 \u0648\u064E\u0644\u064E\u0627 \u0646\u0650\u0633\u064E\u0627\u0621\u064C \u0645\u0650\u0646\u0652 \u0646\u0650\u0633\u064E\u0627\u0621\u064D \u0639\u064E\u0633\u064E\u0649\u0670 \u0623\u064E\u0646\u0652 \u064A\u064E\u0643\u064F\u0646\u0651\u064E \u062E\u064E\u064A\u0652\u0631\u064B\u0627 \u0645\u0650\u0646\u0652\u0647\u064F\u0646\u0651\u064E \u06D6 \u0648\u064E\u0644\u064E\u0627 \u062A\u064E\u0644\u0652\u0645\u0650\u0632\u064F\u0648\u0627 \u0623\u064E\u0646\u0652\u0641\u064F\u0633\u064E\u0643\u064F\u0645\u0652 \u0648\u064E\u0644\u064E\u0627 \u062A\u064E\u0646\u064E\u0627\u0628\u064E\u0632\u064F\u0648\u0627 \u0628\u0650\u0627\u0644\u0652\u0623\u064E\u0644\u0652\u0642\u064E\u0627\u0628\u0650 \u06D6 \u0628\u0650\u0626\u0652\u0633\u064E \u0627\u0644\u0650\u0627\u0633\u0652\u0645\u064F \u0627\u0644\u0652\u0641\u064F\u0633\u064F\u0648\u0642\u064F \u0628\u064E\u0639\u0652\u062F\u064E \u0627\u0644\u0652\u0625\u0650\u064A\u0645\u064E\u0627\u0646\u0650 \u06DA \u0648\u064E\u0645\u064E\u0646\u0652 \u0644\u064E\u0645\u0652 \u064A\u064E\u062A\u064F\u0628\u0652 \u0641\u064E\u0623\u064F\u0648\u0644\u064E\u0670\u0626\u0650\u0643\u064E \u0647\u064F\u0645\u064F \u0627\u0644\u0638\u0651\u064E\u0627\u0644\u0650\u0645\u064F\u0648\u0646\u064E\r\n\n\nArtinya : Hai orang-orang yang beriman, janganlah sekumpulan orang laki-laki merendahkan kumpulan yang lain, boleh jadi yang ditertawakan itu lebih baik dari mereka. Dan jangan pula sekumpulan perempuan merendahkan kumpulan lainnya, boleh jadi yang direndahkan itu lebih baik. Dan janganlah suka mencela dirimu sendiri dan jangan memanggil dengan gelaran yang mengandung ejekan. Seburuk-buruk panggilan adalah (panggilan) yang buruk sesudah iman dan barangsiapa yang tidak bertobat, maka mereka itulah orang-orang yang zalim.</string>
+    <string name="desc_hati"></string>
+    <string name="desc_lisan"></string>
+    <string name="desc_perilaku"></string>
+    <string name="mulai_tes">Mulai Tes</string>
     <string-array name="poin_hati">
         <item>Taubat dan meminta maaf kepada Allah</item>
         <item>Bacaan dan Dzikir Harian</item>
